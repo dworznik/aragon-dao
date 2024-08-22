@@ -6,5 +6,6 @@ const IPFS_API_KEY = getEnv("DEPLOYMENT_IPFS_API_KEY", true) || "";
 
 export const deploymentIpfsClient = create({
   url: IPFS_ENDPOINT,
-  headers: { "X-API-KEY": IPFS_API_KEY, Accept: "application/json" },
+  //   headers: { Authorization: IPFS_API_KEY, Accept: "application/json" },
+  headers: { Accept: "application/json" },
 });

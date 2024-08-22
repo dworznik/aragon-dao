@@ -24,7 +24,8 @@ enum ActionType {
 
 const ipfsClient = create({
   url: PUB_IPFS_ENDPOINT,
-  headers: { "X-API-KEY": PUB_IPFS_API_KEY, Accept: "application/json" },
+  //   headers: { Authorization: PUB_IPFS_API_KEY, Accept: "application/json" },
+  headers: { Accept: "application/json" },
 });
 
 export default function Create() {

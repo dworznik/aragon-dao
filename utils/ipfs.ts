@@ -27,7 +27,7 @@ async function fetchFromIPFS(ipfsUri: string): Promise<Response> {
   const response = await fetch(`${PUB_IPFS_ENDPOINT}/cat?arg=${path}`, {
     method: "POST",
     headers: {
-      "X-API-KEY": PUB_IPFS_API_KEY,
+      Authorization: PUB_IPFS_API_KEY,
       Accept: "application/json",
     },
     signal: controller.signal,
